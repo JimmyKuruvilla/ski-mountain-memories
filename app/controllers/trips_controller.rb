@@ -29,7 +29,7 @@ class TripsController < ApplicationController
       # JJK: I think this kind of behavior should be handled in the model and then written to ERRORS, and ERROrs should be in the view
         @message="please select another hashtag"
       else
-        Instagram.create_subscription("tag", "http://ski-mountain-memories.herokuapp.com/sessions/sub_callback", object_id: trip.hashtag)
+        Instagram.create_subscription("tag", "http://skima.herokuapp.com/sessions/sub_callback", object_id: trip.hashtag)
         redirect_to trip_path(trip.id) and return
       end
     end

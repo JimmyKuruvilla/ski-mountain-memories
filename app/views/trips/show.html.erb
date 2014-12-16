@@ -2,7 +2,7 @@
 
 <script>     
 function markerTimer(){$.get( "/addvisuals", {trip_id: $('#map-canvas').data('trip-id')},"script");}
-var timer=setInterval(markerTimer, 1000);
+var timer=setInterval(markerTimer, 8000);
 </script>
 <div class ="show">
 <div><h1 class="orange"><%= @trip.hashtag %></h1></div>
